@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="media/image/LogoWorld.png" type="image/x-icon"><!--Favicon-->
+  <title>Filtrar por Región</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <script src="js/general.js"></script>
+  <script src="js/regiones.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <!-- Hamburguesa -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand" href="index.html">
+          <i class="fa-solid fa-globe"></i> Inicio
+        </a>
+
+        <!-- Navegación -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="paises.html">Lista de Países</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="regiones.html">Filtrar por Región</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Filtrar Países por Región</h1>
+    <label for="seleccionar-region">Selecciona una región:</label>
+    <select id="seleccionar-region">
+      <option value="todos">Todos</option>
+      <option value="Africa">África</option>
+      <option value="Americas">América</option>
+      <option value="Asia">Asia</option>
+      <option value="Europe">Europa</option>
+      <option value="Oceania">Oceanía</option>
+      <option value="Polar">Polar</option>
+    </select>
+    <div id="contenedor-regiones"></div>
+  </main>
+
+  <footer>
+    <p>Gregory Cruz</p>
+  </footer>
+
+    <!-- Modal para detalles del país -->
+    <div id="modal-pais" class="modal">
+      <div class="modal-contenido">
+        <span class="cerrar-modal">&times;</span>
+        <img id="modal-bandera" src="" alt="Bandera del país" class="modal-bandera">
+        <h2 id="modal-nombre"></h2>
+        <p id="modal-capital"></p>
+        <p id="modal-poblacion"></p>
+      </div>
+    </div>
+
+  <!-- Bootstrap JS y Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
