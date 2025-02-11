@@ -1,4 +1,5 @@
 // general.js: Lógica utilizada para todas las páginas
+
 const urlAPI = "https://restcountries.com/v3.1/all";
 
 async function obtenerPaises() {

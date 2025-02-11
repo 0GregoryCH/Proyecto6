@@ -3,10 +3,17 @@
 // Función para mostrar los países
 function mostrarPaises(paises, filtro = "") {
   const contenedorPaises = document.getElementById("contenedor-paises");
-  contenedorPaises.innerHTML = "";
-  const paisesFiltrados = paises.filter(pais =>
-    pais.name.common.toLowerCase().includes(filtro.toLowerCase())
-  );
+  contenedorPaises.innerHTML = ""; // Limpiar contenedor
+
+  // Filtrar países por nombre en inglés o español
+  const paisesFiltrados = paises.filter(pais => {
+    const nombreIngles = pais.name.common.toLowerCase(); // Inglés
+    const nombreEspanol = pais.translations.spa.common.toLowerCase(); // Español
+    const filtroMinusculas = filtro.toLowerCase();
+
+    // Verificar si el filtro coincide con el nombre en inglés o español
+    return nombreIngles.includes(filtroMinusculas) || nombreEspanol.includes(filtroMinusculas);
+  });
 
   paisesFiltrados.forEach(pais => {
     const tarjetaPais = document.createElement("div");
